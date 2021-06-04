@@ -7,8 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="java-basis" />
+        <module name="design-pattern" />
+        <module name="java-common" />
+        <module name="middleware-redis" />
         <module name="java-distributed" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="design-pattern" target="8" />
+      <module name="java-common" target="8" />
+      <module name="middleware-redis" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
