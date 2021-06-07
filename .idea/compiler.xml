@@ -13,10 +13,5 @@
         <module name="java-distributed" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="design-pattern" target="8" />
-      <module name="java-common" target="8" />
-      <module name="middleware-redis" target="8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
