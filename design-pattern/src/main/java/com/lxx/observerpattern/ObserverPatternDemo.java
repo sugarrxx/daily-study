@@ -1,8 +1,8 @@
 package com.lxx.observerpattern;
 
-import com.lxx.observerpattern.observer.BinaryObserver;
-import com.lxx.observerpattern.observer.HexaObserver;
-import com.lxx.observerpattern.observer.OctalObserver;
+import com.lxx.observerpattern.observer.FriendOneObserver;
+import com.lxx.observerpattern.observer.FriendTwoObserver;
+import com.lxx.observerpattern.subject.ConcreteSubject;
 
 /**
  * 观察者模式
@@ -15,15 +15,21 @@ import com.lxx.observerpattern.observer.OctalObserver;
  */
 public class ObserverPatternDemo {
     public static void main(String[] args) {
-        Subject subject = new Subject();
 
-        new HexaObserver(subject);
-        new OctalObserver(subject);
-        new BinaryObserver(subject);
+        ConcreteSubject subject = new ConcreteSubject();
+        // 这里假设是添加好友
+        subject.attach(new FriendOneObserver());
+        FriendTwoObserver twoObserver = new FriendTwoObserver();
+        subject.attach(twoObserver);
 
-        System.out.println("First state change: 15");
-        subject.setState(15);
-        System.out.println("Second state change: 10");
-        subject.setState(10);
+        // 发送朋友圈动态
+        subject.notifyObservers("第一个朋友圈消息");
+        // 输出结果： FriendOne 知道了你发动态了第一个朋友圈消息
+        //          FriendTwo 知道了你发动态了第一个朋友圈消息
+
+        // 这里发现 twoObserver 是个推荐卖茶叶的，删除好友
+        subject.detach(twoObserver);
+        subject.notifyObservers("第二个朋友圈消息");
+        // 输出结果：FriendOne 知道了你发动态了第二个朋友圈消息
     }
 }
