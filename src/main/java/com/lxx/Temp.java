@@ -1,5 +1,6 @@
 package com.lxx;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -9,8 +10,5 @@ import java.util.Scanner;
 public class Temp {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println(scanner.nextLine());
     }
 }
