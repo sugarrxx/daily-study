@@ -12,6 +12,7 @@
         <module name="java-distributed" />
         <module name="java-basis" />
         <module name="java-concurrent" />
+        <module name="spring-boot" />
         <module name="java-algorithm" />
         <module name="java-common" />
       </profile>

@@ -15,6 +15,7 @@
         <module>middleware-redis</module>
         <module>java-concurrent</module>
         <module>java-algorithm</module>
+        <module>spring-boot</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -24,11 +25,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>2.1.5.RELEASE</version>
-        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
